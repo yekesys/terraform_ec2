@@ -10,14 +10,21 @@ module "create_a_file" {
 }
 
 
-#provider "aws" {
-##  version = "~> 1.4"
-#}
+provider "aws" {
+#  version = "~> 1.4"
+  region = "us-east-1"
+}
+
+module "aws-inst" {
+  source = "./aws_ec2_inst"
+  ec2_instance_name = "forpython-instance"
+  ec2_instance_type = "t2.micro"
+  ami_id            = "ami-0b5eea76982371e91"
+  key_name          = "wk" 
+  server_port       = "22" 
+}
 
 
-#module "aws-inst" {
-#  source = "./aws_ec2_inst"
-#  region = var.aws_region
-#}
+
 
 

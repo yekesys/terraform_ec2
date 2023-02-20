@@ -1,0 +1,27 @@
+
+AWS access key and secret key:
+Do not define in a `variables_tf` file.  
+Instead, define the two environment variables in the linux shell.
+For example:
+export AWS_ACCESS_KEY_ID=`cat ~/.aws/git-terraform-ec2-user-k`
+export AWS_SECRET_ACCESS_KEY=`cat ~/.aws/git-terraform-ec2-user-s`
+
+If I were to define the variables, this is what it would look like in the `variables_tf` file:
+
+variable "aws_access_key" {
+  description = "The AWS access key"
+}
+variable "aws_secret_key" {
+  description = "The AWS secret key"
+}
+
+
+
+
+Still  to do:
+Define a security group for the EC2 instance.
+Out of the box, the security group does not give access.
+
+
+
+
