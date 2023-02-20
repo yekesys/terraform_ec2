@@ -18,10 +18,6 @@ variable "aws_secret_key" {
 
 
 
-Still  to do:
-Define a security group for the EC2 instance.
-Out of the box, the security group does not give access.
-
 
 
 

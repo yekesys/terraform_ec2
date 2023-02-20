@@ -2,14 +2,17 @@
 
 Use Terraform to spin up a new EC2 instance
 
-This is work in progress.
 
+This is working for a file, and for spinning up an EC2 instance.  
 
-This is working for a file.  To deploy:\
+To prepare, set the AWS credentials.  For example, see `thiekeys.sh`
+
+To deploy:\
 `terraform init`\
+`terraform plan`\
 `terraform apply`
 
-The file `filea.txt` is created:\
+The instance should be running and file `filea.txt` is created:\
 `cat filea.txt`
 
 Look at status:\
@@ -22,13 +25,15 @@ Get the IP address:\
 `terraform show | grep public_`
 
 Log in (with IP address from above):\
-ssh -i ~/.ssh/wk.pem ec2-user@public-ip-address
+`ssh -i ~/.ssh/.....pem ec2-user@public-ip-address`
 
 To undo the deployment:\
 `terraform destroy`
 
 
 ---
+
+I implemented this for creating AWS Lamdba function layers.
 
 Install a specific version of Python:\
 `sudo amazon-linux-extras install python3.8 `
