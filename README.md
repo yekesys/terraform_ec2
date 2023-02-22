@@ -5,7 +5,7 @@ Use Terraform to spin up a new EC2 instance
 
 This is working for a file, and for spinning up an EC2 instance.  
 
-To prepare, set the AWS credentials.  For example, see `thiekeys.sh`
+To prepare, set the AWS credentials.  For example, see `thekeys.sh`
 
 To deploy:\
 `terraform init`\
