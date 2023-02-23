@@ -15,8 +15,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
-module "aws-inst" {
-  source = "./aws_ec2_inst"
+module "ec2_inst" {
+  source = "./ec2_inst"
   ec2_instance_name = "forpython-instance"
   ec2_instance_type = "t2.micro"
   ami_id            = "ami-0b5eea76982371e91"
