@@ -1,7 +1,7 @@
 
 
 resource "aws_security_group" "sg-forpython" {
-  name = "terraform-example-instance"
+  name = "forpython-instance"
   ingress {
     from_port   = var.server_port
     to_port     = var.server_port

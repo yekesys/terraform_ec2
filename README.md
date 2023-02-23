@@ -36,11 +36,12 @@ To undo the deployment:\
 I implemented this for creating AWS Lamdba function layers.
 
 Install a specific version of Python:\
+`sudo yum update `\
 `sudo amazon-linux-extras install python3.8 `
 
 Virtual environment:\
 `pip3 install virtualenv`\
-`virtualenv -p /usr/bin/python3.8 py38`
+`virtualenv -p /usr/bin/python3.8 py38`   # the location of python3.8 may differ.  This works for AWS Linux
 `cd py38`\
 `source bin/activate`
 
