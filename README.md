@@ -24,8 +24,11 @@ Look at details:\
 Get the IP address:\
 `terraform show | grep public_`
 
+
+
 Log in (with IP address from above):\
-`ssh -i ~/.ssh/.....pem ec2-user@public-ip-address`
+`export INST_IP=\`terraform output public_ip  | tr -d '"'\``\
+`ssh -i ~/.ssh/.....pem ec2-user@$INST_IP`
 
 To undo the deployment:\
 `terraform destroy`

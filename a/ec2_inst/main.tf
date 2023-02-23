@@ -36,6 +36,3 @@ resource "aws_instance" "forpython" {
 
 
 
-
-
-
