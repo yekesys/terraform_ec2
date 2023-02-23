@@ -27,7 +27,7 @@ Get the IP address:\
 
 
 Log in (with IP address from above):\
-`export INST_IP=\`terraform output public_ip  | tr -d '"'\``\
+`export INST_IP=``terraform output public_ip  | tr -d '"'\`` ` \
 `ssh -i ~/.ssh/.....pem ec2-user@$INST_IP`
 
 To undo the deployment:\
