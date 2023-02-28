@@ -5,7 +5,14 @@ Use Terraform to spin up a new EC2 instance
 
 This is working for a file, and for spinning up an EC2 instance.  
 
-To prepare, set the AWS credentials.  For example, see `thekeys.sh`
+To prepare, set the AWS credentials.  
+export AWS_ACCESS_KEY_ID=`cat ~/.aws/....`
+export AWS_SECRET_ACCESS_KEY=`cat ~/.aws/....`
+export THE_VAR_server_port=22
+echo "Key: $AWS_ACCESS_KEY_ID"
+echo "sec: $AWS_SECRET_ACCESS_KEY"
+echo "server port: $THE_VAR_server_port"
+
 
 To deploy:\
 `terraform init`\
