@@ -30,4 +30,5 @@ override.tf.json
 
 # my changes to the default .gitignore
 a/exportthekeys.sh
+a/mirr_exec_starttime_dege_chris.txt
 
