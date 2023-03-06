@@ -11,4 +11,14 @@ variable "s3_bucket_name" {
 }
 
 
+variable "lambda_timeout" {
+  description = "The timeout for the lambda function"
+  default = 3
+}
+
+variable "lambda_env_vars" {
+  description = "Environment variables"
+}
+
+
 

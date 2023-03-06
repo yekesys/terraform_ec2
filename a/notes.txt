@@ -17,6 +17,14 @@ variable "aws_secret_key" {
 
 
 
+Next:
+ - add ability to upload to my bucket in tf
+ - make a lambda function that writes to S3b
+ - Make an http server that loads from a bucket at create with tf 
+   or does it with a simple command
+
+
+
 
 
 

@@ -6,6 +6,10 @@ resource "aws_lambda_function" "write_to_s3_lfn" {
   handler       = "lambda_function.lambda_handler"
   #source_code_hash = filebase64sha256("lambda_function_payload.zip")
   runtime = "python3.8"
+  timeout       = var.lambda_timeout
+  environment {
+    variables = var.lambda_env_vars
+  }
 }
 # runtime: 3.8
 

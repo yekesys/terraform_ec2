@@ -40,9 +40,17 @@ module "ec2_inst" {
 module "lambda_fn1" {
   source               = "./lambda_fn"
   lambda_function_name = "lambda_function_generated_by_tf"
+  lambda_timeout       = 240
   #s3_bucket_name       = data.s3_existing_bucket.name.s3_bucket_name
   s3_bucket_name       = var.s3_existing_bucket_name
+
+  lambda_env_vars = {
+      MY_ENV_VAR = "my environmt variable"
+  }
 }
+
+
+
 
 
 
