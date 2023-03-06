@@ -27,14 +27,14 @@ provider "aws" {
 }
 
 
-#module "ec2_inst" {
-#  source            = "./ec2_inst"
-#  ec2_instance_name = "forpython-instance"
-#  ec2_instance_type = "t2.micro"
-#  ami_id            = "ami-0b5eea76982371e91"
-#  key_name          = "wk"
-#  server_port       = "22"
-#}
+module "ec2_inst" {
+  source            = "./ec2_inst"
+  ec2_instance_name = "forpython-instance"
+  ec2_instance_type = "t2.micro"
+  ami_id            = "ami-0b5eea76982371e91"
+  key_name          = "wk"
+  server_port       = "22"
+}
 
 
 module "lambda_fn1" {

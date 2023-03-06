@@ -24,6 +24,20 @@ resource "aws_s3_bucket_website_configuration" "website-bucket-config" {
 
 #  policy = file("policy.json")
 
+# needs work
+  policy = jsonencode ({
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::${bucket}/*"    # needs work here
+    }
+  ]
+})
+
   index_document {
     suffix = "index.html"
   }
@@ -34,6 +48,15 @@ resource "aws_s3_bucket_website_configuration" "website-bucket-config" {
 }
 
 
+resource "aws_s3_bucket_public_access_block" "example" {
+  bucket = aws_s3_bucket.website-bucket.id
+
+  # Because all are false, this section is not needed
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+}
 
 
 

@@ -39,6 +39,13 @@ export INST_IP=`terraform output public_ip  | tr -d '"' `
 ssh -i ~/.ssh/.....pem ec2-user@$INST_IP
 ```
 
+Copy to S3:\
+`aws --profile the-profile s3 cp  --recursive the-file-name s3://chris41-yeke-temp-website-tf`    # one file\
+`aws --profile the-profile s3 sync --delete the-directory-with-index-html s3://chris41-yeke-temp-website-tf`  # synch files (no --recursive), include deletes\
+`aws --profile the-profile s3 ls s3://chris41-yeke-temp-website-tf`   \
+`aws --profile the-profile rm --recursive s3://chris41-yeke-temp-website-tf' Need to remove everything before destroying\
+(for public website, I still need to add the public read acl)
+
 To undo the deployment:\
 `terraform destroy`
 
