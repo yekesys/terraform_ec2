@@ -1,1 +1,0 @@
-./mirr_ssh_push_exec.sh started at 2023-03-26T13-41-09
